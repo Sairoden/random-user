@@ -64,6 +64,10 @@ function App() {
     }
   };
 
+  const handleSubmit = () => {
+    getPerson();
+  };
+
   return (
     <main>
       <div className="block bcg-black"></div>
@@ -116,7 +120,7 @@ function App() {
               <FaLock />
             </button>
           </div>
-          <button className="btn" type="button">
+          <button className="btn" type="button" onClick={handleSubmit}>
             {loading ? "loading..." : "random user"}
           </button>
         </div>
